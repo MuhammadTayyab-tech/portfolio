@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Muhammad Tayyab | Portfolio</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <div class="hero-bg-shape"></div>
+
+  <nav>
+
+    <div class="logo">Portfolio.</div>
+
+    <ul class="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#resume">Resume</a></li>
+      <li><a href="#projects">Projects</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#languages">Languages</a></li>
+      <li><a href="#awards">Awards</a></li>
+      <li><a href="#leadership">Leadership</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+
+  </nav>
+
+  <div class="hero-container" id="home">
+
+    <div class="hero-text">
+
+      <h3>Hello, It's Me</h3>
+
+      <h1>Muhammad <br> Tayyab</h1>
+
+      <div class="typing-container">
+        I am a
+        <span id="typewriter-text" style="color:#fff"></span>
+        <span class="cursor"></span>
+      </div>
+
+      <div class="hero-desc-box">
+        <p>
+          Passionate Flutter Developer, Full Stack Web Developer, and AI Agent Specialist focused on building scalable 
+          mobile, desktop, and web applications with modern UI, responsive design, and intelligent software architecture.
+        </p>
+        <div class="hero-socials">
+          <a href="https://github.com/MuhammadTayyab-tech" target="_blank" class="social-icon-btn"><i class="fab fa-github"></i> GitHub</a>
+          <a href="https://www.linkedin.com/in/muhammad-tayyab-5a84a8352?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" class="social-icon-btn"><i class="fab fa-linkedin"></i> LinkedIn</a>
+        </div>
+      </div>
+
+      <a href="#projects" class="btn-main">View My Work</a>
+
+    </div>
+
+    <div class="hero-image-section">
+
+      <div class="image-wrapper interactive-3d-image">
+
+        <div class="img-backdrop"></div>
+
+        <img src="me.png" class="my-photo" alt="Muhammad Tayyab" decode="async">
+
+      </div>
+
+    </div>
+
+  </div>
+
+  <section id="resume">
+
+    <div class="section-title">
+      <h2>Resume</h2>
+      <p>Education, experience, and technical expertise</p>
+    </div>
+
+    <div class="tabs-container">
+
+      <div class="tab-buttons">
+
+        <div class="tab-btn active" onclick="openTab('skills',this)">Skills</div>
+
+        <div class="tab-btn" onclick="openTab('experience',this)">Experience</div>
+
+        <div class="tab-btn" onclick="openTab('education',this)">Education</div>
+
+      </div>
+
+      <div id="skills" class="tab-content active">
+
+        <div class="skills-grid">
+
+          <div class="skill-item">
+            <svg class="skill-svg-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path d="M14.314 0L2.3 12l4.322 4.322 12.014-12.01zM21.7 12.004L14.314 4.62l-4.322 4.32 4.322 4.324zM14.314 14.636l-4.322 4.323 4.322 4.324h7.387l-7.387-7.39a.47.47 0 0 0-.001-.257z"/>
+            </svg>
+            <h4>Flutter</h4>
+          </div>
+          <div class="skill-item"><i class="fas fa-layer-group"></i><h4>Full Stack Web</h4></div>
+          <div class="skill-item"><i class="fas fa-robot"></i><h4>AI Agents</h4></div>
+          <div class="skill-item"><i class="fas fa-comments"></i><h4>Chatbots</h4></div>
+          <div class="skill-item"><i class="fab fa-html5"></i><h4>HTML</h4></div>
+          <div class="skill-item"><i class="fab fa-css3-alt"></i><h4>CSS</h4></div>
+          <div class="skill-item"><i class="fab fa-js"></i><h4>JavaScript</h4></div>
+          <div class="skill-item"><i class="fab fa-react"></i><h4>React</h4></div>
+          <div class="skill-item"><i class="fab fa-python"></i><h4>Python</h4></div>
+          <div class="skill-item"><i class="fas fa-code"></i><h4>C++</h4></div>
+          <div class="skill-item"><i class="fas fa-mobile-screen"></i><h4>Dart</h4></div>
+          <div class="skill-item"><i class="fas fa-cloud"></i><h4>REST APIs</h4></div>
+          <div class="skill-item"><i class="fab fa-git-alt"></i><h4>Git</h4></div>
+          <div class="skill-item"><i class="fas fa-brain"></i><h4>AI & LLMs</h4></div>
+          <div class="skill-item"><i class="fas fa-chart-line"></i><h4>Data Analysis</h4></div>
+          <div class="skill-item"><i class="fas fa-fire"></i><h4>Firebase</h4></div>
+          <div class="skill-item"><i class="fas fa-database"></i><h4>SQL Databases</h4></div>
+          <div class="skill-item"><i class="fas fa-sliders"></i><h4>State Management</h4></div>
+
+        </div>
+
+      </div>
+
+      <div id="experience" class="tab-content">
+
+        <div class="timeline-item">
+          <h4>Flutter Developer Intern</h4>
+          <span>Decent Developers (Thana KPK, Pakistan) | 30/10/2025 – 27/02/2026</span>
+          <p>Built cross-platform Flutter mobile and desktop applications. Implemented beautiful, clean UI components, and integrated backend application modules while debugging performance layouts alongside core developers.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Mobile App Development Intern</h4>
+          <span>Codes Solution (Chakdara KPK, Pakistan) | 18/06/2025 – 23/10/2025</span>
+          <p>Gained valuable practical experience collaborating with live project developers. Structured fluid UI navigation paths using Flutter & Dart widgets, fixed functional bugs, and optimized layouts.</p>
+        </div>
+
+      </div>
+
+      <div id="education" class="tab-content">
+
+        <div class="timeline-item">
+          <h4>BS Software Engineering</h4>
+          <span>Riphah International University Malakand Campus | 20/11/2023 – Present</span>
+          <p>Currently pursuing deep engineering workflows with a strong focus on system configurations, mobile platforms, object-oriented concepts, architectures, and smart software engineering workflows.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Additional Mathematics</h4>
+          <span>Riphah International University Malakand Campus | 20/11/2023 – 01/09/2024</span>
+          <p>Completed intensive training in higher-tier algorithms, computing calculations, mathematical transformations, and logical modeling principles.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>English Language Course</h4>
+          <span>University of Spoken English Language (Peshawar) | 01/10/2023 – 01/04/2024</span>
+          <p>Mastered professional-grade language skills matching high proficiency parameters, boosting technical documentation, presentations, and organizational capabilities.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Intermediate / FSc</h4>
+          <span>ALHuda College Gulabad (Chakdara) | 18/10/2021 – 27/09/2023</span>
+          <p>Completed pre-engineering core fields with structured theoretical logic foundations.</p>
+        </div>
+
+        <div class="timeline-item">
+          <h4>Matriculation</h4>
+          <span>ALHuda Model School Ouch (Chakdara) | 05/03/2009 – 14/07/2021</span>
+          <p>Early academic base achievements. Awarded the Stage Secretary Award during this period for active event coordination.</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="projects" class="projects-section">
+
+    <div class="section-title">
+      <h2>Projects / Work</h2>
+      <p>Professional and practical software projects</p>
+    </div>
+
+    <div class="projects-wrapper">
+
+      <div class="project-row">
+        <div class="project-image interactive-3d-image">
+          <img src="factory.png" alt="Factory Management System Portfolio Card" loading="lazy" decode="async">
+        </div>
+
+        <div class="project-details">
+          <h3>Factory Management POS</h3>
+          <p>Desktop POS system for inventory, billing, reporting, and factory operations.</p>
+
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>SQL</span>
+            <span>Desktop</span>
+            <span>Firebase</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reverse">
+        <div class="project-image interactive-3d-image">
+          <img src="scholarnest.png" alt="ScholarNest Educational Finder Platform" loading="lazy" decode="async">
+        </div>
+
+        <div class="project-details">
+          <h3>ScholarNest App</h3>
+          <p>Educational collaboration platform for students and university projects.</p>
+
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>Firebase</span>
+            <span>Education</span>
+            <span>UI/UX</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-image interactive-3d-image">
+          <img src="barrio.png" alt="Barrio Premium Responsive App Interface" loading="lazy" decode="async">
+        </div>
+
+        <div class="project-details">
+          <h3>Barrio</h3>
+          <p>Modern mobile and desktop application with responsive UI and smooth experience.</p>
+
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>Mobile</span>
+            <span>UI/UX</span>
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row reverse">
+        <div class="project-image interactive-3d-image">
+          <img src="ruralpak.png" alt="Rural Pak Community Dashboard System" loading="lazy" decode="async">
+        </div>
+
+        <div class="project-details">
+          <h3>Rural Pak Application</h3>
+          <p>Application for rural community management and digital accessibility.</p>
+
+          <div class="tech-stack">
+            <span>Flutter</span>
+            <span>Cloud</span>
+            <span>API</span>
+            <span>Community</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="project-row">
+        <div class="project-image interactive-3d-image">
+          <img src="HMS.png" alt="DrChrono Clinical Healthcare Architecture Layout" loading="lazy" decode="async">
+        </div>
+
+        <div class="project-details">
+          <h3>DrChrono Hospital Management</h3>
+          <p>Hospital management software for records, appointments, and billing.</p>
+
+          <div class="tech-stack">
+            <span>Healthcare</span>
+            <span>Management</span>
+            <span>Cloud</span>
+            <span>SQL</span>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="services">
+
+    <div class="section-title">
+      <h2>My Services</h2>
+      <p>Professional expertise tailored for your needs</p>
+    </div>
+
+    <div class="services-grid">
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-robot"></i></div>
+        <h3>Ai Agents & Chatbots</h3>
+        <p>Developing intelligent, contextual AI agents, custom automation paths, and predictive LLM integrations.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-layer-group"></i></div>
+        <h3>Full Stack Web Development</h3>
+        <p>Building responsive, robust, and completely secure front-to-back web architectures and database systems.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-mobile-alt"></i></div>
+        <h3>Mobile App Development</h3>
+        <p>Building cross-platform mobile apps using Flutter and Dart.</p>
+      </div>
+
+      <div class="service-card">
+        <div class="service-icon"><i class="fas fa-palette"></i></div>
+        <h3>UI/UX Design</h3>
+        <p>Designing modern and user-friendly interfaces with great user experience.</p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="languages" style="background:var(--bg-light);">
+
+    <div class="section-title">
+      <h2>Language Skills</h2>
+      <p>Communication and multilingual proficiency</p>
+    </div>
+
+    <div class="language-bars">
+
+      <div class="language-item">
+        <h4>English <span>C1 / C2</span></h4>
+        <div class="language-progress">
+          <span style="width:90%"></span>
+        </div>
+      </div>
+
+      <div class="language-item">
+        <h4>Pashto <span>Native</span></h4>
+        <div class="language-progress">
+          <span style="width:100%"></span>
+        </div>
+      </div>
+
+      <div class="language-item">
+        <h4>Urdu <span>Fluent</span></h4>
+        <div class="language-progress">
+          <span style="width:98%"></span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="leadership">
+
+    <div class="section-title">
+      <h2>Leadership & Management</h2>
+      <p>Coordination, teamwork, and leadership experience</p>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-users"></i></div>
+
+        <h3>Leadership</h3>
+
+        <ul>
+          <li>Team Coordination</li>
+          <li>Project Planning</li>
+          <li>Communication Skills</li>
+          <li>Volunteer Coordination</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-lightbulb"></i></div>
+
+        <h3>Problem Solving</h3>
+
+        <ul>
+          <li>Debugging & Optimization</li>
+          <li>Decision Making</li>
+          <li>Task Management</li>
+          <li>Software Development Practices</li>
+        </ul>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-award"></i></div>
+
+        <h3>Youth Leadership</h3>
+
+        <p>
+          Active participation in Young Leaders Parliament KP
+          and community leadership activities.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section id="awards" style="background:var(--bg-light);">
+
+    <div class="section-title">
+      <h2>Honours & Awards</h2>
+      <p>Achievements and recognitions</p>
+    </div>
+
+    <div class="info-grid">
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-code"></i></div>
+
+        <h3>TechQuest Coding Winner</h3>
+
+        <p>
+          Awarded for outstanding performance
+          and software problem-solving skills.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-microphone"></i></div>
+
+        <h3>Debate Competition Winner</h3>
+
+        <p>
+          Recognized for communication
+          and public speaking abilities.
+        </p>
+      </div>
+
+      <div class="info-card">
+        <div class="info-icon"><i class="fas fa-star"></i></div>
+
+        <h3>Stage Secretary Award</h3>
+
+        <p>
+          Awarded for leadership and
+          event management excellence.
+        </p>
+      </div>
+
+    </div>
+
+  </section>
+
+  <section>
+
+    <div class="highlight-box">
+
+      <h2>About Me</h2>
+
+      <p>
+        I am a passionate Flutter App Developer, Full Stack Web Developer, and AI Agent/Chatbot Specialist with experience
+        in building cross-platform solutions. I enjoy configuring smart automations, solving complex problems, 
+        learning new technologies, and designing real-world scalable software systems.
+      </p>
+
+    </div>
+
+  </section>
+
+  <section id="messages" style="background:var(--bg-light);">
+
+    <div class="section-title">
+      <h2>Send Me a Message</h2>
+      <p>Get in touch with me through this contact form</p>
+    </div>
+
+    <div class="contact-form-wrapper">
+      <form id="contactForm" class="contact-form">
+        
+        <div class="form-group">
+          <input type="text" id="name" name="name" placeholder="Your Name" required>
+        </div>
+
+        <div class="form-group">
+          <input type="email" id="email" name="email" placeholder="Your Email" required>
+        </div>
+
+        <div class="form-group">
+          <input type="text" id="subject" name="subject" placeholder="Subject" required>
+        </div>
+
+        <div class="form-group">
+          <textarea id="message" name="message" placeholder="Your Message" rows="8" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-send-message">Send Message</button>
+
+      </form>
+    </div>
+
+  </section>
+
+  <footer id="contact">
+
+    <h2>Let's Work Together</h2>
+
+    <p>Have a project in mind?</p>
+
+    <br>
+
+    <a href="mailto:muhtayyabofficial@gmail.com">
+      muhtayyabofficial@gmail.com
+    </a>
+
+    <br><br>
+
+    <p>(+92) 03497484746</p>
+
+    <br>
+
+    <div class="footer-socials">
+      <a href="https://github.com/MuhammadTayyab-tech" target="_blank" title="GitHub"><i class="fab fa-github"></i></a>
+      <a href="https://www.linkedin.com/in/muhammad-tayyab-5a84a8352?utm_source=share_via&utm_content=profile&utm_medium=member_android" target="_blank" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+    </div>
+
+    <br>
+
+    <p style="font-size:12px;opacity:0.75;">
+      © 2026 Muhammad Tayyab. All Rights Reserved.
+    </p>
+
+  </footer>
+
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+  <script>
+    (function(){
+      emailjs.init('7NjGn5nrnjIHZC3oB');
+      console.log('✅ EmailJS initialized');
+    })();
+  </script>
+
+  <script src="script.js"></script>
+
+</body>
+</html>
