@@ -132,34 +132,35 @@ nav {
 .nav-links a:hover::after { width: 100%; }
 .nav-links a:hover { color: var(--purple-main); }
 
-/* DYNAMIC LIQUID OVERLAY GRAPHIC SHAPE BACKDROP */
+/* DYNAMIC HERO BACKDROP SHAPE */
 .hero-bg-shape {
   position: absolute;
   top: 0;
   left: 0;
-  width: 50%;
-  height: 100%;
-  min-height: 100vh;
+  width: 100%;       /* Fluid width covers the whole content area dynamically */
+  height: 100%;      /* Grows smoothly according to typewriter text wrap */
   background: var(--purple-main);
-  border-bottom-right-radius: 100% 60%;
   z-index: -1;
+  pointer-events: none;
+  animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
 }
 
-/* CROSS-SCREEN RESPONSIVE HERO LAYER MANAGER */
+/* STABLE HERO VIEWPORT WRAPPER */
 .hero-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 40px;
-  flex-wrap: wrap; /* Automatically wraps elements on screens narrowed by side panels */
-  padding: 135px 8% 80px 8%; 
-  perspective: 1000px;
+  gap: 50px;
+  flex-wrap: wrap;   /* Gracefully wraps elements on side-pane layout triggers */
+  padding: 140px 8% 80px 8%; 
+  position: relative;
+  overflow: hidden;
 }
 
 .hero-text {
   flex: 1.1;
-  min-width: 320px; /* Guarantees layout structural containment space on narrower screens */
+  min-width: 320px;
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -187,7 +188,7 @@ nav {
   animation: shimmer 3s infinite;
 }
 
-@webkit-keyframes shimmer {
+@keyframes shimmer {
   0%, 100% { filter: brightness(1); }
   50% { filter: brightness(1.2); }
 }
@@ -277,7 +278,7 @@ nav {
   min-width: 300px;
 }
 
-/* STYLISH GLASS LAYERED IMAGE FRAME WRAPPER */
+/* PREMIUM LAYERED 3D IMAGE WRAPPER CONTEXTS WITH GLASS EFFECTS */
 .interactive-3d-image {
   position: relative;
   perspective: 1000px;
@@ -345,7 +346,7 @@ nav {
 
 .image-wrapper { width: 380px; height: 490px; max-width: 100%; }
 
-/* Soft organic shape peaking out perfectly from behind your photo */
+/* Fixed aesthetic visibility offset frames peaking out beautifully when static */
 .img-backdrop {
   position: absolute;
   top: 20px;     
@@ -480,7 +481,7 @@ footer a { color: var(--gold-accent) !important; font-weight: 700; }
 .footer-socials a { display: inline-flex !important; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.08) !important; color: #fff !important; font-size: 20px; border: 1px solid rgba(255, 255, 255, 0.15); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
 .footer-socials a:hover { background: var(--gold-accent) !important; color: var(--purple-main) !important; border-color: var(--gold-accent); transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.25); }
 
-/* RESPONSIVE BREAKPOINT RULES WITH COLUMN BALANCING MATRIX */
+/* RESPONSIVE LAYOUT */
 @media (max-width: 1200px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 968px) {
   .nav-links { display: none; }
