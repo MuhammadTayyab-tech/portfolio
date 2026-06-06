@@ -132,24 +132,24 @@ nav {
 .nav-links a:hover::after { width: 100%; }
 .nav-links a:hover { color: var(--purple-main); }
 
-/* HERO CONTAINER ADJUSTMENTS */
+/* HERO CONTAINER AND FLEXIBLE ANIMATED BACKDROP MATRIX */
 .hero-bg-shape {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  min-height: 100vh;
+  top: -10%;
+  left: -10%;
+  width: 55vw; /* Viewport scalable width completely removes online wrapping size constraints */
+  height: 120%;
   background: var(--purple-main);
-  border-bottom-right-radius: 100% 60%;
-  z-index: -1;
+  z-index: -1; /* Ensures backdrop sits completely behind textual element structures */
+  pointer-events: none;
+  animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
 }
 
 .hero-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 135px 8% 80px 8%; 
+  padding: 135px 8% 80px 8%; /* Reduced header whitespace padding buffer */
   perspective: 1000px;
 }
 
@@ -271,7 +271,7 @@ nav {
   align-items: center;
 }
 
-/* PREMIUM LAYERED 3D IMAGE CONTAINER PROPERTIES WITH GLASS ACCENT FRAME */
+/* PREMIUM LAYERED 3D GLASS STYLE IMAGE FRAME WRAPPER */
 .interactive-3d-image {
   position: relative;
   perspective: 1000px;
@@ -302,7 +302,7 @@ nav {
   will-change: transform;
 }
 
-/* AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE EXTENSION */
+/* AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE LOOP */
 .ambient-shifting-shape {
   animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
 }
@@ -339,7 +339,7 @@ nav {
 
 .image-wrapper { width: 380px; height: 490px; }
 
-/* Fixed offsets to make the shifting backdrop shape peek out clearly when static */
+/* Enhanced aesthetic offsets to guarantee backdrop visibility when static */
 .img-backdrop {
   position: absolute;
   top: 20px;     
