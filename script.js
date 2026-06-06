@@ -27,7 +27,7 @@ const textElement = document.getElementById("typewriter-text");
 
 const phrases = [
   "Flutter Developer",
-  "Ai Agent and chatbot Expert",
+  "AI Agent and Chatbot Expert",
   "Full Stack Web Developer",
   "Mobile App Developer",
   "Software Engineer"
@@ -75,7 +75,6 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all animated layout components
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll(
     'section, .section-title, .timeline-item, .skill-item, .project-row, .service-card, .info-card, .highlight-box, .scroll-slide-left, .scroll-slide-right'
@@ -86,7 +85,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// FIXED 3D CARDS LOGIC - Only tracks mouse relative to the card being actively hovered
+// FIXED 3D CARDS LOGIC
 document.addEventListener('DOMContentLoaded', () => {
   const allCards = document.querySelectorAll('.skill-item, .service-card, .info-card, .tab-btn, .social-icon-btn');
 
@@ -101,7 +100,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     card.addEventListener('mousemove', (e) => {
       const rect = card.getBoundingClientRect();
-      
       const x = e.clientX - rect.left;
       const y = e.clientY - rect.top;
       
@@ -120,7 +118,7 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// ENHANCED 3D FLUID TILT + COORDINATE GLARE TRACKING FOR CORE IMAGES
+// ENHANCED 3D FLUID TILT + COORDINATE GLARE TRACKING
 document.addEventListener('DOMContentLoaded', () => {
   const imageContainers = document.querySelectorAll('.interactive-3d-image');
 
@@ -141,7 +139,6 @@ document.addEventListener('DOMContentLoaded', () => {
           const rotateX = ((centerY - y) / centerY) * 12;
           const rotateY = ((x - centerX) / centerX) * 12;
 
-          // Track glare angle parameters
           const glareX = (x / rect.width) * 100;
           const glareY = (y / rect.height) * 100;
 
@@ -163,7 +160,6 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mouseleave', () => {
       window.requestAnimationFrame(() => {
         const img = container.querySelector('img');
-        
         if (img) {
           img.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
         }
@@ -175,27 +171,10 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// TRIGGER HERO SECTION VIEWPORT LOADING ENTRIES
-document.addEventListener('DOMContentLoaded', () => {
-  const animatedEntries = document.querySelectorAll('.slide-entry-left, .slide-entry-right');
-  setTimeout(() => {
-    animatedEntries.forEach(el => el.classList.add('visible'));
-  }, 150);
-});
-
-// FLOATING ANIMATION FOR ELEMENTS
-const floatingElements = document.querySelectorAll('.image-wrapper, .highlight-box');
-floatingElements.forEach((el, index) => {
-  const delay = index * 0.3;
-  el.style.animation = `floatAnim 4s ease-in-out infinite`;
-  el.style.animationDelay = `${delay}s`;
-});
-
 document.addEventListener('DOMContentLoaded', () => {
   typeEffect();
 
   const contactForm = document.getElementById('contactForm');
-
   if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
       e.preventDefault();
@@ -216,7 +195,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
       function sendEmail() {
         if (typeof emailjs === 'undefined') {
-          console.log('EmailJS not ready, retrying...');
           setTimeout(sendEmail, 500);
           return;
         }
@@ -229,24 +207,19 @@ document.addEventListener('DOMContentLoaded', () => {
           to_email: 'muhtayyabofficial@gmail.com'
         };
 
-        console.log('Sending with EmailJS:', templateParams);
-
         emailjs.send('service_j1rxyxp', 'template_xcqtdh8', templateParams)
           .then(function(response) {
-            console.log('✅ Email sent successfully!', response);
             alert('Thank you! Your message has been sent successfully.');
             contactForm.reset();
             btn.disabled = false;
             btn.textContent = 'Send Message';
           })
           .catch(function(error) {
-            console.error('❌ Failed to send email:', error);
-            alert('Error: ' + (error.text || 'Failed to send message. Please try again.'));
+            alert('Error sending message. Please try again.');
             btn.disabled = false;
             btn.textContent = 'Send Message';
           });
       }
-
       sendEmail();
     });
   }
