@@ -75,10 +75,10 @@ const observer = new IntersectionObserver((entries) => {
   });
 }, observerOptions);
 
-// Observe all animated elements
+// Observe all animated layout components
 document.addEventListener('DOMContentLoaded', () => {
   const elements = document.querySelectorAll(
-    'section, .section-title, .timeline-item, .skill-item, .project-row, .service-card, .info-card, .highlight-box'
+    'section, .section-title, .timeline-item, .skill-item, .project-row, .service-card, .info-card, .highlight-box, .scroll-slide-left, .scroll-slide-right'
   );
   
   elements.forEach(el => {
@@ -120,12 +120,13 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
-// HIGH-PERFORMANCE ANIMATION FRAME GRAPHICS MATRIX LOOP
+// ENHANCED 3D FLUID TILT + COORDINATE GLARE TRACKING FOR CORE IMAGES
 document.addEventListener('DOMContentLoaded', () => {
   const imageContainers = document.querySelectorAll('.interactive-3d-image');
 
   imageContainers.forEach(container => {
     let ticking = false;
+    const glareSheet = container.querySelector('.image-glare');
 
     container.addEventListener('mousemove', (e) => {
       if (!ticking) {
@@ -140,14 +141,18 @@ document.addEventListener('DOMContentLoaded', () => {
           const rotateX = ((centerY - y) / centerY) * 12;
           const rotateY = ((x - centerX) / centerX) * 12;
 
+          // Track glare angle parameters
+          const glareX = (x / rect.width) * 100;
+          const glareY = (y / rect.height) * 100;
+
           const img = container.querySelector('img');
           if (img) {
             img.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.06)`;
           }
           
-          const backdrop = container.querySelector('.img-backdrop');
-          if (backdrop) {
-            backdrop.style.transform = `translate3d(${rotateY * 1.5}px, ${-rotateX * 1.5}px, -10px)`;
+          if (glareSheet) {
+            glareSheet.style.opacity = '1';
+            glareSheet.style.background = `radial-gradient(circle at ${glareX}% ${glareY}%, rgba(255,255,255,0.25) 0%, transparent 60%)`;
           }
           ticking = false;
         });
@@ -158,32 +163,16 @@ document.addEventListener('DOMContentLoaded', () => {
     container.addEventListener('mouseleave', () => {
       window.requestAnimationFrame(() => {
         const img = container.querySelector('img');
-        const backdrop = container.querySelector('.img-backdrop');
         
         if (img) {
           img.style.transform = 'perspective(1000px) rotateX(0deg) rotateY(0deg) scale(1)';
         }
-        if (backdrop) {
-          backdrop.style.transform = 'translate3d(0, 0, 0)';
+        if (glareSheet) {
+          glareSheet.style.opacity = '0';
         }
       });
     });
   });
-});
-
-// SMOOTH PARALLAX EFFECT on scroll
-window.addEventListener('scroll', function() {
-  const scrollPosition = window.pageYOffset;
-  
-  const heroBg = document.querySelector('.hero-bg-shape');
-  if (heroBg) {
-    heroBg.style.transform = `translateY(${scrollPosition * 0.5}px)`;
-  }
-  
-  const myPhoto = document.querySelector('.interactive-3d-image:not(:hover) .my-photo');
-  if (myPhoto && scrollPosition < window.innerHeight) {
-    myPhoto.style.transform = `translateY(${scrollPosition * 0.15}px)`;
-  }
 });
 
 // FLOATING ANIMATION FOR ELEMENTS

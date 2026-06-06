@@ -34,11 +34,10 @@ ul {
   list-style: none;
 }
 
-/* BASE CONTAINER DEFINITION WITH CLIPPING OVERFLOW PREVENTION HINT */
 section {
   padding: 100px 8%;
   transition: transform 0.6s cubic-bezier(0.25, 1, 0.5, 1), opacity 0.6s ease;
-  overflow: hidden; /* Secures structural masking edges safely on section borders */
+  overflow: hidden;
 }
 
 /* BACKGROUND AMBIENT GLIMPSE GLOWS */
@@ -105,27 +104,37 @@ section.active:nth-of-type(8) { animation-name: slideInFromLeft; }
   }
 }
 
-/* HIGH-PERFORMANCE INTRO STYLES */
+/* ANTI-CACHE CSS TRIGGERED INITIAL ENTRY KEYFRAMES (Bypasses old script dependencies) */
 .slide-entry-left {
-  opacity: 0;
-  transform: translateX(-60px);
-  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
-}
-
-.slide-entry-left.visible {
-  opacity: 1;
-  transform: translateX(0);
+  animation: heroSlideLeftIntro 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: transform, opacity;
 }
 
 .slide-entry-right {
-  opacity: 0;
-  transform: translateX(60px);
-  transition: opacity 0.9s cubic-bezier(0.25, 1, 0.5, 1), transform 0.9s cubic-bezier(0.25, 1, 0.5, 1);
+  animation: heroSlideRightIntro 1.1s cubic-bezier(0.25, 1, 0.5, 1) forwards;
+  will-change: transform, opacity;
 }
 
-.slide-entry-right.visible {
-  opacity: 1;
-  transform: translateX(0);
+@keyframes heroSlideLeftIntro {
+  from {
+    opacity: 0;
+    transform: translate3d(-60px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+}
+
+@keyframes heroSlideRightIntro {
+  from {
+    opacity: 0;
+    transform: translate3d(60px, 0, 0);
+  }
+  to {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
 }
 
 /* NAVBAR */
@@ -332,8 +341,8 @@ nav {
   transform-style: preserve-3d;
   cursor: pointer;
   contain: layout paint;
-  overflow: hidden; /* Prevents overflow artifacts outside card layout boundaries */
-  border-radius: 14px; /* Matches source mockup rounded clipping masking rules */
+  overflow: hidden; 
+  border-radius: 14px; 
 }
 
 .interactive-3d-image img {
@@ -351,7 +360,7 @@ nav {
   will-change: transform;
 }
 
-/* REQUIREMENT: AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE EXTENSION */
+/* AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE EXTENSION */
 .ambient-shifting-shape {
   animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
 }
@@ -396,8 +405,8 @@ nav {
 
 .img-backdrop {
   position: absolute;
-  top: 0;     /* Fixed top shift assignment from 25px to secure vertical alignments */
-  right: 0;   /* Fixed right shift assignment from -25px to clear bleeding edge errors */
+  top: 0;     
+  right: 0;   
   width: 100%;
   height: 100%;
   background: var(--purple-main);
