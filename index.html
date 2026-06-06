@@ -5,22 +5,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Muhammad Tayyab | Portfolio</title>
 
-  <!-- Fonts + Icons -->
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght=300;400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-  <!-- AOS -->
   <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
-  <!-- Stylesheet -->
   <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
 
-  <div class="hero-bg-shape"></div>
+  <div class="bg-glow-circle circle-1"></div>
+  <div class="bg-glow-circle circle-2"></div>
 
-  <!-- NAVBAR -->
+  <div class="hero-bg-shape"></div>
 
   <nav>
 
@@ -39,11 +37,9 @@
 
   </nav>
 
-  <!-- HERO -->
-
   <div class="hero-container" id="home">
 
-    <div class="hero-text">
+    <div class="hero-text slide-entry-left">
 
       <h3>Hello, It's Me</h3>
 
@@ -72,19 +68,19 @@
 
     <div class="hero-image-section">
 
-      <div class="image-wrapper interactive-3d-image">
+      <div class="image-wrapper interactive-3d-image slide-entry-right">
 
-        <div class="img-backdrop"></div>
+        <div class="img-backdrop ambient-shifting-shape"></div>
 
         <img src="me.webp" class="my-photo" alt="Muhammad Tayyab" decode="async">
+        
+        <div class="image-glare"></div>
 
       </div>
 
     </div>
 
   </div>
-
-  <!-- RESUME -->
 
   <section id="resume">
 
@@ -191,8 +187,6 @@
 
   </section>
 
-  <!-- PROJECTS -->
-
   <section id="projects" class="projects-section">
 
     <div class="section-title">
@@ -202,9 +196,10 @@
 
     <div class="projects-wrapper">
 
-      <div class="project-row">
+      <div class="project-row scroll-slide-left">
         <div class="project-image interactive-3d-image">
           <img src="factory.webp" alt="Factory Management System Portfolio Card" loading="lazy" decode="async">
+          <div class="image-glare"></div>
         </div>
 
         <div class="project-details">
@@ -220,9 +215,10 @@
         </div>
       </div>
 
-      <div class="project-row reverse">
+      <div class="project-row reverse scroll-slide-right">
         <div class="project-image interactive-3d-image">
           <img src="scholarnest.webp" alt="ScholarNest Educational Finder Platform" loading="lazy" decode="async">
+          <div class="image-glare"></div>
         </div>
 
         <div class="project-details">
@@ -238,9 +234,10 @@
         </div>
       </div>
 
-      <div class="project-row">
+      <div class="project-row scroll-slide-left">
         <div class="project-image interactive-3d-image">
           <img src="barrio.webp" alt="Barrio Premium Responsive App Interface" loading="lazy" decode="async">
+          <div class="image-glare"></div>
         </div>
 
         <div class="project-details">
@@ -256,9 +253,10 @@
         </div>
       </div>
 
-      <div class="project-row reverse">
+      <div class="project-row reverse scroll-slide-right">
         <div class="project-image interactive-3d-image">
           <img src="ruralpak.webp" alt="Rural Pak Community Dashboard System" loading="lazy" decode="async">
+          <div class="image-glare"></div>
         </div>
 
         <div class="project-details">
@@ -274,9 +272,10 @@
         </div>
       </div>
 
-      <div class="project-row">
+      <div class="project-row scroll-slide-left">
         <div class="project-image interactive-3d-image">
           <img src="HMS.webp" alt="DrChrono Clinical Healthcare Architecture Layout" loading="lazy" decode="async">
+          <div class="image-glare"></div>
         </div>
 
         <div class="project-details">
@@ -295,8 +294,6 @@
     </div>
 
   </section>
-
-  <!-- SERVICES -->
 
   <section id="services">
 
@@ -335,8 +332,6 @@
 
   </section>
 
-  <!-- LANGUAGES -->
-
   <section id="languages" style="background:var(--bg-light);">
 
     <div class="section-title">
@@ -370,8 +365,6 @@
     </div>
 
   </section>
-
-  <!-- LEADERSHIP -->
 
   <section id="leadership">
 
@@ -423,8 +416,6 @@
 
   </section>
 
-  <!-- AWARDS -->
-
   <section id="awards" style="background:var(--bg-light);">
 
     <div class="section-title">
@@ -471,8 +462,6 @@
 
   </section>
 
-  <!-- ABOUT -->
-
   <section>
 
     <div class="highlight-box">
@@ -488,8 +477,6 @@
     </div>
 
   </section>
-
-  <!-- MESSAGE / CONTACT FORM -->
 
   <section id="messages" style="background:var(--bg-light);">
 
@@ -555,10 +542,8 @@
 
   </footer>
 
-  <!-- AOS -->
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
-  <!-- EmailJS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
   <script>
@@ -568,7 +553,6 @@
     })();
   </script>
 
-  <!-- JavaScript -->
   <script src="script.js"></script>
 
 </body>
