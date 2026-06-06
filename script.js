@@ -175,6 +175,14 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 });
 
+// TRIGGER HERO SECTION VIEWPORT LOADING ENTRIES
+document.addEventListener('DOMContentLoaded', () => {
+  const animatedEntries = document.querySelectorAll('.slide-entry-left, .slide-entry-right');
+  setTimeout(() => {
+    animatedEntries.forEach(el => el.classList.add('visible'));
+  }, 150);
+});
+
 // FLOATING ANIMATION FOR ELEMENTS
 const floatingElements = document.querySelectorAll('.image-wrapper, .highlight-box');
 floatingElements.forEach((el, index) => {
