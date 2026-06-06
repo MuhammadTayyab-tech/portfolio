@@ -132,29 +132,34 @@ nav {
 .nav-links a:hover::after { width: 100%; }
 .nav-links a:hover { color: var(--purple-main); }
 
-/* HERO CONTAINER AND FLEXIBLE ANIMATED BACKDROP MATRIX */
+/* DYNAMIC LIQUID OVERLAY GRAPHIC SHAPE BACKDROP */
 .hero-bg-shape {
   position: absolute;
-  top: -10%;
-  left: -10%;
-  width: 55vw; /* Viewport scalable width completely removes online wrapping size constraints */
-  height: 120%;
+  top: 0;
+  left: 0;
+  width: 50%;
+  height: 100%;
+  min-height: 100vh;
   background: var(--purple-main);
-  z-index: -1; /* Ensures backdrop sits completely behind textual element structures */
-  pointer-events: none;
-  animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
+  border-bottom-right-radius: 100% 60%;
+  z-index: -1;
 }
 
+/* CROSS-SCREEN RESPONSIVE HERO LAYER MANAGER */
 .hero-container {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 135px 8% 80px 8%; /* Reduced header whitespace padding buffer */
+  justify-content: space-between;
+  gap: 40px;
+  flex-wrap: wrap; /* Automatically wraps elements on screens narrowed by side panels */
+  padding: 135px 8% 80px 8%; 
   perspective: 1000px;
 }
 
 .hero-text {
-  flex: 1;
+  flex: 1.1;
+  min-width: 320px; /* Guarantees layout structural containment space on narrower screens */
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -182,7 +187,7 @@ nav {
   animation: shimmer 3s infinite;
 }
 
-@keyframes shimmer {
+@webkit-keyframes shimmer {
   0%, 100% { filter: brightness(1); }
   50% { filter: brightness(1.2); }
 }
@@ -265,26 +270,27 @@ nav {
 }
 
 .hero-image-section {
-  flex: 1;
+  flex: 0.9;
   display: flex;
   justify-content: flex-end;
   align-items: center;
+  min-width: 300px;
 }
 
-/* PREMIUM LAYERED 3D GLASS STYLE IMAGE FRAME WRAPPER */
+/* STYLISH GLASS LAYERED IMAGE FRAME WRAPPER */
 .interactive-3d-image {
   position: relative;
   perspective: 1000px;
   transform-style: preserve-3d;
   cursor: pointer;
   contain: layout paint;
-  border-radius: 20px; 
-  padding: 10px; 
-  background: rgba(255, 255, 255, 0.1); 
-  border: 1px solid rgba(255, 255, 255, 0.25); 
+  border-radius: 20px;
+  padding: 10px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   backdrop-filter: blur(10px);
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  overflow: visible; 
+  overflow: visible;
 }
 
 .interactive-3d-image img {
@@ -302,7 +308,7 @@ nav {
   will-change: transform;
 }
 
-/* AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE LOOP */
+/* AUTOMATED CONTINUOUS OSCILLATING BACKGROUND SHAPE EXTENSION */
 .ambient-shifting-shape {
   animation: shapeMorphingLoop 12s ease-in-out infinite alternate !important;
 }
@@ -337,9 +343,9 @@ nav {
   will-change: background, opacity;
 }
 
-.image-wrapper { width: 380px; height: 490px; }
+.image-wrapper { width: 380px; height: 490px; max-width: 100%; }
 
-/* Enhanced aesthetic offsets to guarantee backdrop visibility when static */
+/* Soft organic shape peaking out perfectly from behind your photo */
 .img-backdrop {
   position: absolute;
   top: 20px;     
@@ -474,12 +480,12 @@ footer a { color: var(--gold-accent) !important; font-weight: 700; }
 .footer-socials a { display: inline-flex !important; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 50%; background: rgba(255, 255, 255, 0.08) !important; color: #fff !important; font-size: 20px; border: 1px solid rgba(255, 255, 255, 0.15); transition: all 0.3s cubic-bezier(0.25, 1, 0.5, 1); }
 .footer-socials a:hover { background: var(--gold-accent) !important; color: var(--purple-main) !important; border-color: var(--gold-accent); transform: translateY(-4px) scale(1.05); box-shadow: 0 10px 20px rgba(251, 191, 36, 0.25); }
 
-/* RESPONSIVE LAYOUT */
+/* RESPONSIVE BREAKPOINT RULES WITH COLUMN BALANCING MATRIX */
 @media (max-width: 1200px) { .services-grid { grid-template-columns: repeat(2, 1fr); } }
 @media (max-width: 968px) {
   .nav-links { display: none; }
   .hero-container { flex-direction: column; text-align: center; padding-top: 100px; }
-  .hero-bg-shape { width: 120%; height: 60%; top: -10%; left: -10%; }
+  .hero-bg-shape { width: 100%; height: 62vh; border-bottom-right-radius: 0; }
   .hero-image-section { justify-content: center; padding-top: 40px; }
   .image-wrapper { width: 300px; height: 400px; }
   .project-row, .project-row.reverse { flex-direction: column; }
