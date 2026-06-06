@@ -135,13 +135,13 @@ nav {
   color: var(--purple-main);
 }
 
-/* HERO - FIXED VERTICAL SPACE SPACING BUDGET */
+/* HERO - SPACING AND POSITIONING FIXES */
 .hero-bg-shape {
   position: absolute;
   top: 0;
   left: 0;
   width: 50%;
-  height: 100%; /* Changed from 100vh to fit the container dynamically */
+  height: 100%;
   min-height: 100vh;
   background: var(--purple-main);
   border-bottom-right-radius: 100% 60%;
@@ -152,7 +152,8 @@ nav {
   min-height: 100vh;
   display: flex;
   align-items: center;
-  padding: 110px 8% 60px 8%; /* Added 110px top padding to cleanly clear the navigation bar */
+  /* Increased top padding significantly to force top-level elements out from beneath the navbar */
+  padding: 160px 8% 80px 8%; 
   perspective: 1000px;
 }
 
@@ -170,10 +171,11 @@ nav {
   margin-bottom: 12px;
   text-transform: uppercase;
   letter-spacing: 2px;
+  display: block;
 }
 
 .hero-text h1 {
-  font-size: 58px; /* Slightly adjusted down from 62px to handle screen limitations safely */
+  font-size: 58px;
   font-weight: 800;
   line-height: 1.1;
   margin-bottom: 15px;
@@ -263,7 +265,7 @@ nav {
   position: relative;
   transition: all 0.3s ease;
   transform: translateZ(0);
-  align-self: flex-start; /* Ensures button tracks cleanly on its own bounds */
+  align-self: flex-start;
 }
 
 .btn-main:hover {
@@ -300,7 +302,7 @@ nav {
 }
 
 .image-wrapper {
-  width: 380px; /* Scaled slightly down to ensure layout symmetry in tight browser views */
+  width: 380px;
   height: 490px;
 }
 
@@ -616,16 +618,17 @@ nav {
   font-weight: 700;
 }
 
-/* SERVICES */
+/* SERVICES - FIXED TO FORCE 4 CARDS ON A SINGLE ROW ON DESKTOP */
 .services-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  /* Decreased the min-width threshold to 200px so all 4 fit on standard desktop resolutions */
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); 
+  gap: 25px;
 }
 
 .service-card {
   background: #fff;
-  padding: 40px 30px;
+  padding: 35px 20px; /* Slimmed padding slightly to balance the width constraints beautifully */
   border-radius: 15px;
   text-align: center;
   border: 1px solid #f0f0f0;
@@ -659,9 +662,9 @@ nav {
 }
 
 .service-icon {
-  font-size: 50px;
+  font-size: 44px; /* Slightly adjusted down from 50px to optimize space scaling */
   color: var(--purple-main);
-  margin-bottom: 25px;
+  margin-bottom: 20px;
   display: inline-block;
   transition: all 0.4s ease;
 }
@@ -672,14 +675,15 @@ nav {
 }
 
 .service-card h3 {
-  font-size: 22px;
-  margin-bottom: 14px;
+  font-size: 20px; /* Slightly scaled from 22px to secure text alignment symmetry */
+  margin-bottom: 12px;
   font-weight: 900;
 }
 
 .service-card p {
   color: var(--text-gray);
-  line-height: 1.8;
+  line-height: 1.7;
+  font-size: 13.5px;
 }
 
 /* INFO CARDS */
@@ -980,5 +984,9 @@ footer a {
 
   .hero-socials {
     justify-content: center;
+  }
+  
+  .services-grid {
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   }
 }
